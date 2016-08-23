@@ -1016,7 +1016,6 @@ a.keyword {
   *zoom: 1;
   margin-right: 2px;
 }
-/*  import media queries */
 /* Media Queries - Retina Display */
 @media (-webkit-min-device-pixel-ratio: 2) {
   .hatena-module-search-box .search-module-button {
