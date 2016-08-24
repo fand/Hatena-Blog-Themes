@@ -631,50 +631,58 @@ a.keyword {
   border: 1px solid #dddddd;
   padding: 10px;
 }
-/* entry */
-.entry {
-  position: relative;
-  margin-bottom: 100px;
+.comment-box ul {
+  list-style: none;
+  margin: 0 0 15px 0;
+  padding: 0;
+  font-size: 95%;
+  line-height: 1.7;
 }
-.entry-header {
-  padding: 0 0 10px 0;
-  margin-bottom: 20px;
+.comment-box li {
+  padding: 10px 0 10px 60px;
   border-bottom: 1px solid #dddddd;
   position: relative;
 }
-.entry-title {
-  margin: 0;
-  line-height: 1.3;
-  font-size: 160%;
+.comment-box li:first-child {
+  border-top: 1px solid #dddddd;
 }
-/* 日付 */
-.date {
+.comment-box .read-more-comments {
+  padding-left: 0;
+}
+.comment-box .hatena-id-icon {
+  position: absolute;
+  top: 10px;
+  left: 0;
+  width: 50px !important;
+  height: 50px !important;
+  border-top-right-radius: 3px;
+  border-bottom-right-radius: 0;
+  border-bottom-left-radius: 0;
+  border-top-left-radius: 0;
+  border-radius: 3px;
+  background-clip: padding-box;
+}
+.comment-user-name {
+  margin: 0 0 10px 0;
   font-weight: bold;
-  margin-bottom: 10px;
 }
-.date a {
-  color: #1487bd;
-  text-decoration: none;
+.comment-content {
   font-size: 90%;
+  margin: 0 0 10px 0;
+  word-wrap: break-word;
 }
-/* カテゴリ */
-.categories {
-  margin-top: 10px;
+.comment-content p {
+  margin: 0 0 10px 0;
+}
+.comment-metadata {
   font-size: 80%;
+  color: #999999;
+  margin: 0;
 }
-.categories a {
+.comment-metadata a {
   color: #999999;
 }
-.categories.no-categories {
-  margin: 0;
-}
-/* 「編集する」ボタン */
-.entry-header-menu {
-  position: absolute;
-  bottom: 0px;
-  left: -60px;
-}
-.entry-header-menu a {
+.leave-comment-title {
   display: inline-block;
   *display: inline;
   *zoom: 1;
@@ -698,17 +706,10 @@ a.keyword {
   border: 1px solid rgba(0, 0, 0, 0.2);
   text-decoration: none !important;
 }
-.entry-header-menu a:hover {
+.leave-comment-title:hover {
   background-color: #f5f5f5;
   text-decoration: none !important;
 }
-@media (max-width: calc(768px - 1)) {
-  .entry-header-menu {
-    top: -30px;
-    left: 0px;
-  }
-}
-/* entry-content の中の書式 */
 .entry-content {
   font-size: 95%;
   line-height: 1.7;
@@ -799,7 +800,10 @@ a.keyword {
 .entry-content .hatena-asin-detail li {
   line-height: 1.4;
 }
-/* entry-footer */
+.entry {
+  position: relative;
+  margin-bottom: 100px;
+}
 .entry-footer {
   margin-top: 10px;
 }
@@ -814,59 +818,42 @@ a.keyword {
 .entry-footer-html {
   margin: 10px 0;
 }
-/* コメント */
-.comment-box ul {
-  list-style: none;
-  margin: 0 0 15px 0;
-  padding: 0;
-  font-size: 95%;
-  line-height: 1.7;
-}
-.comment-box li {
-  padding: 10px 0 10px 60px;
+.entry-header {
+  padding: 0 0 10px 0;
+  margin-bottom: 20px;
   border-bottom: 1px solid #dddddd;
   position: relative;
 }
-.comment-box li:first-child {
-  border-top: 1px solid #dddddd;
+.entry-header .entry-title {
+  margin: 0;
+  line-height: 1.3;
+  font-size: 160%;
 }
-.comment-box .read-more-comments {
-  padding-left: 0;
-}
-.comment-box .hatena-id-icon {
-  position: absolute;
-  top: 10px;
-  left: 0;
-  width: 50px !important;
-  height: 50px !important;
-  border-top-right-radius: 3px;
-  border-bottom-right-radius: 0;
-  border-bottom-left-radius: 0;
-  border-top-left-radius: 0;
-  border-radius: 3px;
-  background-clip: padding-box;
-}
-.comment-user-name {
-  margin: 0 0 10px 0;
+.entry-header .entry-date {
   font-weight: bold;
+  margin-bottom: 10px;
 }
-.comment-content {
+.entry-header .entry-date a {
+  color: #1487bd;
+  text-decoration: none;
   font-size: 90%;
-  margin: 0 0 10px 0;
-  word-wrap: break-word;
 }
-.comment-content p {
-  margin: 0 0 10px 0;
-}
-.comment-metadata {
+.entry-header .entry-categories {
+  margin-top: 10px;
   font-size: 80%;
+}
+.entry-header .entry-categories a {
   color: #999999;
+}
+.entry-header .entry-categories.no-categories {
   margin: 0;
 }
-.comment-metadata a {
-  color: #999999;
+.entry-header-menu {
+  position: absolute;
+  bottom: 0px;
+  left: -60px;
 }
-.leave-comment-title {
+.entry-header-menu a {
   display: inline-block;
   *display: inline;
   *zoom: 1;
@@ -890,9 +877,15 @@ a.keyword {
   border: 1px solid rgba(0, 0, 0, 0.2);
   text-decoration: none !important;
 }
-.leave-comment-title:hover {
+.entry-header-menu a:hover {
   background-color: #f5f5f5;
   text-decoration: none !important;
+}
+@media (max-width: calc(768px - 1)) {
+  .entry-header-menu {
+    top: -30px;
+    left: 0px;
+  }
 }
 .hatena-module {
   margin-bottom: 60px;

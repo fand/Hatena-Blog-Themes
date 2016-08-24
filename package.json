@@ -4,7 +4,7 @@
   "description": "はてなブログで使えるテーマ集です。",
   "main": "index.js",
   "scripts": {
-    "build": "lessc index.less > index.css",
+    "build": "lessc --glob index.less > index.css",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "repository": {
@@ -18,7 +18,10 @@
   },
   "homepage": "https://github.com/fand/Hatena-Blog-Themes#readme",
   "dependencies": {
-    "less": "^2.7.1",
     "normalize.css": "^4.2.0"
+  },
+  "devDependencies": {
+    "less": "^2.7.1",
+    "less-plugin-glob": "^1.1.1"
   }
 }
