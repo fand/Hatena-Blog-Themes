@@ -1,17 +1,30 @@
 @charset "utf-8";
-/*
-  Theme: amagi-theme
+/*!
+  Theme: Hatena-Blog-Theme-ITCSS
   Author: Takayosi Amagi
-  Description: yo
+  Description:
   Licensed under the MIT license.
 */
 
-@import (less) "node_modules/normalize.css/normalize.css";
-@import "lib/_mixin";
+// The styles below are structured with the ITCSS concepts.
+// https://speakerdeck.com/dafed/managing-css-projects-with-itcss
+
+// Settings
 @import "lib/_variable";
+
+// Tools
+@import "lib/_mixin";
+
+// Generic
+@import (less) "node_modules/normalize.css/normalize.css";
+
+// Base
 @import "lib/_common";
+
+// Objects
 @import "lib/_button";
 
+// Components
 @import "lib/_globalheader";
 @import "lib/_layout";
 
@@ -25,4 +38,4 @@
 @import "lib/_about_page";
 @import "lib/_archive_page";
 
-@import "lib/_media-queries.less";
+// Trumps

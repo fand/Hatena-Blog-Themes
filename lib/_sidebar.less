@@ -1,5 +1,6 @@
-/* sidebar */
+@import "_variable";
 
+/* sidebar */
 #box2 {
     font-size: 85%;
     line-height: 1.5;
@@ -23,7 +24,6 @@
 }
 
 /* Profile module */
-
 .hatena-module-profile {
 
     .profile-icon {
@@ -51,7 +51,6 @@
 /* urllist module
     リンク・最新記事・最近のコメント・月別アーカイブ・カテゴリモジュールは .hatena-urllist という共通の class が振られます
 */
-
 .hatena-urllist {
     list-style: none;
     margin: 0 0 0 0;
@@ -70,7 +69,6 @@
 }
 
 /* Search module */
-
 .hatena-module-search-box {
 
     .search-form {
@@ -107,4 +105,46 @@
             opacity: 0.85;
         }
     }
+}
+
+// For Retina
+@media (-webkit-min-device-pixel-ratio: 2) {
+    .hatena-module-search-box .search-module-button {
+        background: transparent url(http://blog.hatena.ne.jp/images/theme/search@2x.png) no-repeat right center;
+        background-size: 20px 20px;
+    }
+}
+
+// For small tablets
+@media (max-width: calc(@width-tablet - 1)) {
+
+    #globalheader-container {
+        position: static;
+    }
+
+    #container {
+        width: 93.75%;
+        word-wrap: break-word;
+        overflow: hidden;
+    }
+
+    #main {
+        width: 100%;
+        float: none;
+    }
+
+    #box2 {
+        width: 100%;
+        float: none;
+    }
+
+    #box2-inner {
+        width: 100%;
+    }
+
+    .hatena-module {
+        width: 100%;
+        float: none;
+    }
+
 }

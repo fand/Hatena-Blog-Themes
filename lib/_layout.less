@@ -1,3 +1,5 @@
+@import "_variable";
+
 /* container */
 
 #container {
@@ -58,3 +60,67 @@
 }
 
 ---- END 1カラム */
+
+/* Media Queries - Tablet */
+
+@media (min-width: @width-tablet) and (max-width: @width-pc) {
+
+    #container {
+        width: 724px;
+    }
+
+    #main {
+        width: 460px;
+    }
+
+    #box2 {
+        width: 245px;
+    }
+
+/* 1カラムにしたい場合は下記のコメントアウトを外してください ----
+    #main,
+    #box2 {
+        width: 100%;
+    }
+
+    #box2-inner {
+        width: 744px;
+
+    }
+
+    .hatena-module {
+        width: 228px;
+    }
+---- END 1カラム */
+
+}
+
+/* Media Queries - Small Tablet & Smartphone */
+
+@media (max-width: calc(@width-tablet - 1)) {
+
+    #globalheader-container {
+        position: static;
+    }
+
+    #container {
+        width: 93.75%;
+        word-wrap: break-word;
+        overflow: hidden;
+    }
+
+    #main {
+        width: 100%;
+        float: none;
+    }
+
+    #box2 {
+        width: 100%;
+        float: none;
+    }
+
+    #box2-inner {
+        width: 100%;
+    }
+
+}

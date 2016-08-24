@@ -1,3 +1,5 @@
+@import "_variable";
+
 /* entry */
 
 .entry {
@@ -51,6 +53,14 @@
     left: -60px;
     a {
         .btn;
+    }
+}
+
+// For small tablets
+@media (max-width: calc(@width-tablet - 1)) {
+    .entry-header-menu {
+        top: -30px;
+        left: 0px;
     }
 }
 
