@@ -478,6 +478,27 @@ a.keyword {
   line-height: normal;
   font-weight: bold;
 }
+.hatena-module {
+  margin-bottom: 60px;
+}
+.hatena-module-title {
+  font-weight: bold;
+  margin-bottom: 15px;
+  font-size: 120%;
+}
+.hatena-module-title a {
+  color: #454545;
+  text-decoration: none;
+}
+.hatena-module-title a:hover {
+  text-decoration: underline;
+}
+@media (max-width: calc(768px - 1)) {
+  .hatena-module {
+    width: 100%;
+    float: none;
+  }
+}
 /* ヘッダ（グローバルヘッダ）
   グローバルヘッダの中はiframeですが、
   #globalheader-container に背景色や文字色を指定することでirameの中にも色が反映されます。
@@ -887,25 +908,13 @@ a.keyword {
     left: 0px;
   }
 }
-.hatena-module {
-  margin-bottom: 60px;
-}
-.hatena-module-title {
-  font-weight: bold;
-  margin-bottom: 15px;
-  font-size: 120%;
-}
-.hatena-module-title a {
-  color: #454545;
-  text-decoration: none;
-}
-.hatena-module-title a:hover {
-  text-decoration: underline;
+#box2-inner {
+  font-size: 0.85rem;
+  line-height: 1.5;
 }
 @media (max-width: calc(768px - 1)) {
-  .hatena-module {
+  #box2-inner {
     width: 100%;
-    float: none;
   }
 }
 .hatena-module-profile .profile-icon {
@@ -929,22 +938,6 @@ a.keyword {
 }
 .hatena-module-profile .profile-description p {
   margin-top: 0;
-}
-/* urllist module
-    リンク・最新記事・最近のコメント・月別アーカイブ・カテゴリモジュールは .hatena-urllist という共通の class が振られます
-*/
-.hatena-urllist {
-  list-style: none;
-  margin: 0 0 0 0;
-  padding: 0 0 0 0;
-}
-.hatena-urllist li {
-  padding: 8px 0;
-  border-bottom: 1px solid #dddddd;
-  line-height: 1.5;
-}
-.hatena-urllist li a {
-  text-decoration: none;
 }
 /* Search module */
 .hatena-module-search-box .search-form {
@@ -990,14 +983,21 @@ a.keyword {
     background-size: 20px 20px;
   }
 }
-#box2-inner {
-  font-size: 0.85rem;
+/* urllist module
+    リンク・最新記事・最近のコメント・月別アーカイブ・カテゴリモジュールは .hatena-urllist という共通の class が振られます
+*/
+.hatena-urllist {
+  list-style: none;
+  margin: 0 0 0 0;
+  padding: 0 0 0 0;
+}
+.hatena-urllist li {
+  padding: 8px 0;
+  border-bottom: 1px solid #dddddd;
   line-height: 1.5;
 }
-@media (max-width: calc(768px - 1)) {
-  #box2-inner {
-    width: 100%;
-  }
+.hatena-urllist li a {
+  text-decoration: none;
 }
 /* Pager */
 .pager {
