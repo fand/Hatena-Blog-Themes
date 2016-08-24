@@ -1,10 +1,4 @@
 @charset "utf-8";
-/*!
-  Theme: Hatena-Blog-Theme-ITCSS
-  Author: Takayosi Amagi
-  Description:
-  Licensed under the MIT license.
-*/
 .clearfix {
   display: block;
   *zoom: 1;
@@ -397,7 +391,6 @@ textarea {
   font: inherit;
   /* 2 */
 }
-/* Common */
 html,
 body {
   font-family: 'Helvetica Neue', 'Helvetica', 'Arial', 'Hiragino Kaku Gothic Pro', 'Meiryo', 'MS PGothic', sans-serif;
@@ -439,7 +432,6 @@ a.keyword {
   border-bottom: 1px dotted #dddddd;
   color: #454545;
 }
-/* Buttons */
 .btn {
   display: inline-block;
   *display: inline;
