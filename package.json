@@ -4,7 +4,7 @@
   "description": "はてなブログで使えるテーマ集です。",
   "main": "index.js",
   "scripts": {
-    "build": "lessc --glob index.less > index.css",
+    "build": "lessc --include-path=lib --glob index.less > index.css",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "repository": {
